@@ -1,6 +1,6 @@
 ## Initial Setup
 
-1. Download and Install Node.js (https://nodejs.org/en/) 
+1. Download and Install Node.js LTS (https://nodejs.org/en/) 
 2. Open a terminal and run: `npm install -g cordova ionic`
 
 
