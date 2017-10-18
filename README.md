@@ -13,7 +13,8 @@
 
 ## Documentation
 
-  * https://ionicframework.com/docs/
+  * [Ionicframework Docs](https://ionicframework.com/docs)
+  * [TypeScript HandBook](https://www.typescriptlang.org/docs/handbook/basic-types.html)
 
 
 ## Google Drive for this Project
