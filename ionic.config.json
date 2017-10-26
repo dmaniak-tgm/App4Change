@@ -1,5 +1,6 @@
 {
   "name": "App4Change",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {}
 }
