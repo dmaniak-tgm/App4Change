@@ -1,26 +1,22 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## Initial Setup
 
-## How to use this template
+1. Download and Install Node.js LTS (https://nodejs.org/en/) 
+2. Open a terminal and run: `npm install -g cordova ionic`
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+## Project Installation
 
-### With the Ionic CLI:
+1. Clone this project
+2. Open a terminal, navigate to the project directory and run: `npm install`
+3. Run `ionic serve` in the project directory to see if the project is working
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
+## Documentation
 
-Then, to run it, cd into `myBlank` and run:
+  * [Ionicframework Docs](https://ionicframework.com/docs)
+  * [TypeScript HandBook](https://www.typescriptlang.org/docs/handbook/basic-types.html)
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
 
-Substitute ios for android if not on a Mac.
+## Google Drive for this Project
 
+https://drive.google.com/drive/u/0/folders/0BwEoE823KhWCZ3lkbTVxSGNRQWc
