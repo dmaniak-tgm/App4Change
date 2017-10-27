@@ -1,0 +1,44 @@
+<ion-menu [content]="content">
+    <ion-header>
+
+    </ion-header>
+    <ion-content padding>
+        <ion-list>
+            <button ion-item (click)="openMyProfile()">
+                <ion-icon item-left name="contact"></ion-icon>
+                Profil
+            </button>
+            <button ion-item [navPush]="categoryPage">
+                <ion-icon item-left name="apps"></ion-icon>
+                Kategorien
+            </button>
+            <button ion-item [navPush]="aboutPage">
+                <ion-icon item-left name="people"></ion-icon>
+                Über uns
+            </button>
+            <button ion-item [navPush]="faqPage">
+                <ion-icon item-left name="help"></ion-icon>
+                FAQ
+            </button>
+        </ion-list>
+        <div class="socialmedia-container">
+            <button ion-button clear large round icon-only (click)="goFacebook()">
+                <ion-icon color="facebook" name="logo-facebook"></ion-icon>
+            </button>
+            <button ion-button clear large round icon-only (click)="goTwitter()">
+                <ion-icon color="twitter" name="logo-twitter"></ion-icon>
+            </button>
+            <button ion-button clear large round icon-only (click)="goInsta()">
+                <ion-icon color="instagram" name="logo-instagram"></ion-icon>
+            </button>
+            <button ion-button clear large round icon-only (click)="goYT()">
+                <ion-icon color="youtube" name="logo-youtube"></ion-icon>
+            </button>
+        </div>
+    </ion-content>
+    <ion-footer (click)="logout()">
+        <span>Abmelden</span>
+    </ion-footer>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>

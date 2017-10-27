@@ -3,13 +3,12 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-//import { HomePage } from '../pages/home/home';
-import { TestPage } from '../pages/test/test';
+import { SidemenuPage } from '../pages/sidemenu/sidemenu';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TestPage;
+  rootPage:any = SidemenuPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

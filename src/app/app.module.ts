@@ -12,6 +12,7 @@ import { FaqPage } from '../pages/faq/faq';
 import { LoginPage } from "../pages/login/login";
 import { ProfilePage } from '../pages/profile/profile';
 import { ProjectPage } from "../pages/project/project";
+import { SidemenuPage } from "../pages/sidemenu/sidemenu";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectPage } from "../pages/project/project";
     FaqPage,
     LoginPage,
     ProfilePage,
-    ProjectPage
+    ProjectPage,
+    SidemenuPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { ProjectPage } from "../pages/project/project";
     FaqPage,
     LoginPage,
     ProfilePage,
-    ProjectPage
+    ProjectPage,
+    SidemenuPage
   ],
   providers: [
     StatusBar,
