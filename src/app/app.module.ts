@@ -12,6 +12,7 @@ import { FaqPage } from '../pages/faq/faq';
 import { LoginPage } from "../pages/login/login";
 import { ProfilePage } from '../pages/profile/profile';
 import { ProjectPage } from "../pages/project/project";
+import { CategoryPage } from "../pages/category/category";
 import { SidemenuPage } from "../pages/sidemenu/sidemenu";
 
 @NgModule({
@@ -24,6 +25,7 @@ import { SidemenuPage } from "../pages/sidemenu/sidemenu";
     LoginPage,
     ProfilePage,
     ProjectPage,
+    CategoryPage,
     SidemenuPage
   ],
   imports: [
@@ -40,6 +42,7 @@ import { SidemenuPage } from "../pages/sidemenu/sidemenu";
     LoginPage,
     ProfilePage,
     ProjectPage,
+    CategoryPage,
     SidemenuPage
   ],
   providers: [

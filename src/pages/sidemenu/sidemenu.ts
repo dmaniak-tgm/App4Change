@@ -4,6 +4,7 @@ import { TestPage } from "../test/test";
 import { AboutPage } from '../about/about';
 import { FaqPage } from '../faq/faq';
 import { ProfilePage } from '../profile/profile';
+import { CategoryPage } from '../category/category';
 
 @Component({
   selector: 'page-sidemenu',
@@ -11,16 +12,18 @@ import { ProfilePage } from '../profile/profile';
 })
 export class SidemenuPage {
   private rootPage = TestPage;
-  private categoryPage = null;
+  
   private faqPage = FaqPage;
-  private aboutPage = AboutPage
+  private categoryPage = CategoryPage;
+  private aboutPage = AboutPage;
+  private profilePage = ProfilePage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+  ) { }
 
   public logout(): void {
-    this.navCtrl.pop();
-    this.navCtrl.push(FaqPage);
     console.trace("Needs to be implemented");
   }
 

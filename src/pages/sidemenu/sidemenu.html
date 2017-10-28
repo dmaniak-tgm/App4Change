@@ -4,7 +4,7 @@
     </ion-header>
     <ion-content padding>
         <ion-list>
-            <button ion-item (click)="openMyProfile()">
+            <button ion-item [navPush]="profilePage">
                 <ion-icon item-left name="contact"></ion-icon>
                 Profil
             </button>
