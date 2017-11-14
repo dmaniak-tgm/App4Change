@@ -4,6 +4,10 @@
     </ion-header>
     <ion-content padding>
         <ion-list>
+            <button ion-item (click)="scanQR()">
+                <ion-icon item-left name="qr-scanner"></ion-icon>
+                QR-Code scannen
+            </button>
             <button ion-item [navPush]="profilePage">
                 <ion-icon item-left name="contact"></ion-icon>
                 Profil

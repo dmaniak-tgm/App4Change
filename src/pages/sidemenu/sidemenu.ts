@@ -5,6 +5,7 @@ import { AboutPage } from '../about/about';
 import { FaqPage } from '../faq/faq';
 import { ProfilePage } from '../profile/profile';
 import { CategoryPage } from '../category/category';
+import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 
 @Component({
   selector: 'page-sidemenu',
@@ -21,7 +22,12 @@ export class SidemenuPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
+    public qrScanner: QRScanner
   ) { }
+
+  public scanQR(): void {
+    this.qrScanner.scan();
+  }
 
   public logout(): void {
     console.trace("Needs to be implemented");
