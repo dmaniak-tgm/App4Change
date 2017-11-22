@@ -9,4 +9,6 @@ export class FaqPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+  
+  
 }
