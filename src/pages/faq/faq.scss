@@ -5,7 +5,6 @@ page-faq {
         white-space: normal;
         text-align: center;
         font-size: 16px !important;
-        color: white;
     }
     
     .ue {
@@ -19,6 +18,25 @@ page-faq {
        text-align: center;
 
    }
+
+   #open1 {
+       background-color:#84b991; 
+        display: block;
+        color: white;
+        transition: 1s all;
+   }
+   #open2 {
+    background-color:#84b991; 
+     display: block;
+     color: white;
+     transition: 1s all;
+}
+    #open3 {
+    background-color:#84b991; 
+     display: block;
+     color: white;
+     transition: 1s all;
+}
 }
 
 
