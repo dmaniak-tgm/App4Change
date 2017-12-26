@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+
 import { TestPage } from "../test/test";
 import { AboutPage } from '../about/about';
 import { FaqPage } from '../faq/faq';
 import { ProfilePage } from '../profile/profile';
 import { CategoryPage } from '../category/category';
+
 import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner';
+import { ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-sidemenu',
@@ -22,7 +25,8 @@ export class SidemenuPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private scanner: BarcodeScanner
+    private scanner: BarcodeScanner,
+    private toastCtrl: ToastController
   ) { }
 
   public scanQR(): void {
@@ -30,12 +34,11 @@ export class SidemenuPage {
       showFlipCameraButton: false,
       showTorchButton: false,
       prompt: "Scan Patron4change QR-Code",
-      formats: "QR_CODE",
       orientation: "portrait",
       torchOn: false,
       resultDisplayDuration: 0
     }).then((res: BarcodeScanResult) => {
-      if(this.checkIfPatron(res)) {
+      if(!res.cancelled && this.getPatronId(res)) {
         this.navCtrl.push(ProfilePage); // TODO: need to add id to profile page push 
       }
     });
@@ -61,13 +64,17 @@ export class SidemenuPage {
     window.open("https://www.youtube.com/playlist?list=PLne435yhSICfjp5hqN9IpCRY5NolZ9c2G");
   }
 
-  private getPatronID(qrcode: BarcodeScanResult): String {
+  private getPatronId(qrcode: BarcodeScanResult): String {
     let content: String = qrcode.text;
     
-    if(content.startsWith("patron4change://profile/")) {
-      return content.replace("patron4change://profile/", ""); // gets id
+    if(qrcode.format === "QR_CODE" && content.startsWith("patron4change://profile/")) {
+      return content.replace("patron4change://profile/", ""); // replaces with nothing so only id is left
     }
-
+    this.toastCtrl.create({
+      message: "Das ist kein Patron4change QR-Code!",
+      position: "bottom",
+      duration: 1500
+    }).present();
     return null;
   }
 }
