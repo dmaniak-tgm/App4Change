@@ -19,24 +19,20 @@ page-faq {
 
    }
 
-   #open1 {
-       background-color:#84b991; 
+   .open {
+        background-color:white; 
         display: block;
-        color: white;
+        color: black;
         transition: 1s all;
+        display: none;
    }
-   #open2 {
-    background-color:#84b991; 
-     display: block;
-     color: white;
-     transition: 1s all;
-}
-    #open3 {
-    background-color:#84b991; 
-     display: block;
-     color: white;
-     transition: 1s all;
-}
+   ion-slide {
+       align-items: flex-start !important;
+   }
+   .swiper-slide{
+       overflow-y: scroll;
+       display: block;
+   }
 }
 
 
