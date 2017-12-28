@@ -1,10 +1,10 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-    <ion-title>project</ion-title>
+    <ion-title>Rettet die Umwelt</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -13,10 +13,47 @@
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <iframe height="202px" width="360px" src="https://www.youtube.com/embed/rzc3_b_KnHc"></iframe>
+      <ion-col>
+          <ion-card>
+              <iframe  src="https://www.youtube.com/embed/rzc3_b_KnHc?modestbranding=1&showinfo=0&controls=0"></iframe>
+              <ion-card-header>
+                  Informationen
+                </ion-card-header>
+                <ion-card-content>
+                  Changemaker: Fritz Phantom
+                  <br>
+                  Land: Österreich 
+                  <br>
+                  Tags:
+                  <ion-chip color=primary>
+                    <ion-label>Umwelt</ion-label>
+                  </ion-chip>
+                    
+                </ion-card-content>
+          </ion-card>
+        
+      </ion-col>
+    </ion-row>
+    <ion-row display:flex>
+      <ion-col>
+        <button ion-button color="primary"> Nachricht </button>
+      </ion-col>
+      
+      <ion-col>
+        <button ion-button color="primary"> Spenden </button>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <button ion-button color="primary"> Nachricht </button>
+        <ion-card>
+            <ion-card-header>
+                Beschreibung
+              </ion-card-header>
+              <ion-card-content>
+                  Das projekt kümmert sich um die Umwelt.
+                  Mehr Menschen sollen Fahrrad fahren ihren Müll wegwerfen und aufhören zu rauchen.   
+              </ion-card-content>
+        </ion-card>
     </ion-row>
   </ion-grid>
+  
 </ion-content>
