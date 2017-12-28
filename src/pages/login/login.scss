@@ -1,3 +1,65 @@
 page-login {
+ 
+    .login-content {
+      background: #399F8B;
+   
+      .logo-row {
+        padding-top: 50px;
+        padding-bottom: 20px;
+      }
+   
+      .login-box {
+        background: #399F8B;
+        padding: 20px 20px 0px 20px;
+        margin-top: 30px;
+      }
+   
+      ion-row {
+         align-items: center;
+         text-align: center;
+       }
+   
+       ion-item {
+           border-radius: 30px !important;
+           padding-left: 30px !important;
+           font-size: 0.9em;
+           margin-bottom: 10px;
+           border: 1px solid #ffffff;
+           border-bottom: 0px !important;
+           box-shadow: none !important;
+       }
+   
+       .signup-col {
+         margin: 0px 16px 0px 16px;
+         padding-bottom: 20px;
+       }
+   
+       .item-inner {
+         border-bottom-color: #ffffff !important;
+         box-shadow: none !important;
+       }
+   
+       .submit-btn {
+         color: #050303;
+         background: rgb(13, 156, 44);
+       }
+   
+       .register-btn {
+         background:  rgb(13, 156, 44);
+         color: #050303;
+         font-size: 0.8em;
+         height: 50px;
+         font-size: 100%;
 
-}
+       }
+    }
+    .pwVergessen-btn{
+      background: #399F8B;
+      color: #050303;
+      box-shadow:  #399F8B;
+      font-size: 0.7em;
+      outline: false;
+      
+    }
+   
+  }

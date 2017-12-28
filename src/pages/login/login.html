@@ -1,15 +1,36 @@
-<ion-header>
+<ion-content class="login-content" padding>
+  <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <img src="logo.jpg" alt="p4ChangeLogo" />
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <div class="login-box">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
 
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>login</ion-title>
-  </ion-navbar>
+          <ion-item>
+            <ion-input type="text" placeholder="Email" name="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password" name="password"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
 
-</ion-header>
-
-
-<ion-content padding>
-
+    <ion-row>
+      <ion-col class="signup-col">
+        <button ion-button class="submit-btn">Anmelden</button>
+        <button ion-button class="pwVergessen-btn">passwort vergessen?</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="signup-col">
+          <button ion-button class="register-btn">kostenlos registrieren</button>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>
