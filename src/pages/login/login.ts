@@ -9,11 +9,8 @@ import { RegisterPage } from '../register/register';
   
 })
 export class LoginPage {
+  private regPage: any = RegisterPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  goToRegisterpage(){
-    window.location.href = "register.register.html";
-  }
-
 }

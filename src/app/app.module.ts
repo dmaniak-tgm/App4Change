@@ -14,6 +14,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ProjectPage } from "../pages/project/project";
 import { CategoryPage } from "../pages/category/category";
 import { SidemenuPage } from "../pages/sidemenu/sidemenu";
+import { RegisterPage } from "../pages/register/register";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SidemenuPage } from "../pages/sidemenu/sidemenu";
     ProfilePage,
     ProjectPage,
     CategoryPage,
-    SidemenuPage
+    SidemenuPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { SidemenuPage } from "../pages/sidemenu/sidemenu";
     ProfilePage,
     ProjectPage,
     CategoryPage,
-    SidemenuPage
+    SidemenuPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
