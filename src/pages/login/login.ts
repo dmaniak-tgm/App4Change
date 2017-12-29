@@ -4,7 +4,7 @@ import { ViewChild } from '@angular/core';
 import { RegisterPage } from '../register/register';
 import { Http } from '@angular/http';
 import { TestPage } from "../test/test";
-import { AlertController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-login',
@@ -15,36 +15,38 @@ export class LoginPage {
   private regPage: any = RegisterPage;
   data: any = {};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http, private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http, private toastCtrl: ToastController) {
     this.data.username = "";
     this.data.password = "";
     this.data.response = "";
   }
 
-  private showAlert(message : string){
-    let alert = this.alertCtrl.create({
-      title: 'Info',
-      subTitle: message,
-      buttons: ['OK']
+  private showToast(message : string) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 2500,
+      position: "bottom"
     });
-    alert.present();
+    toast.present();
   }
 
   login(): void {
     let link = "http://localhost/PHP/login.php";
-    let myData = JSON.stringify({username: this.data.username, password: this.data.password});
+
+    let myData = JSON.stringify({
+      username: this.data.username, 
+      password: this.data.password
+    });
     
     this.http.post(link, myData).subscribe(data => {
       this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
       
-      if(this.data.response == "Successfully logged in"){
-        this.showAlert(this.data.response);
+      if(this.data.response == "Erfolgreich angemeldet!") {
+        this.showToast(this.data.response);
         this.navCtrl.setRoot(TestPage);
-      }else{
-        this.showAlert("Something went wrong! \n Please try again...");
+      }else {
+        this.showToast("Fehler bei der Anmeldung! Versuchs nochmal...");
       }
-    }, error => console.log("Oooops!"));
-   
-   
+    }, error => console.trace("Oooops!"));
   }
 }
