@@ -2,7 +2,7 @@
   <ion-row class="logo-row">
     <ion-col></ion-col>
     <ion-col width-67>
-      <img src="logo.jpg" alt="p4ChangeLogo" />
+      <img src="../assets/bilder/logo.jpg" alt="p4ChangeLogo" />
     </ion-col>
     <ion-col></ion-col>
   </ion-row>
@@ -24,12 +24,17 @@
     <ion-row>
       <ion-col class="signup-col">
         <button ion-button class="submit-btn">Anmelden</button>
-        <button ion-button class="pwVergessen-btn">passwort vergessen?</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="pw-col">
+        <a href="#" class="pw-link">Passwort vergessen?</a> <!-- TO BE IMPLEMENTED -->
+
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="signup-col">
-          <button ion-button class="register-btn" [navPush]="regPage">kostenlos registrieren</button>
+        <button ion-button class="register-btn" [navPush]="regPage">kostenlos registrieren</button>
       </ion-col>
     </ion-row>
   </div>

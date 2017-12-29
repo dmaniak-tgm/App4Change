@@ -1,36 +1,63 @@
 <ion-content class="login-content" padding>
-        <ion-row class="logo-row">
-          <ion-col></ion-col>
-          <ion-col width-67>
-            <img src="logo.jpg" alt="Servas" />
-          </ion-col>
-          <ion-col></ion-col>
-        </ion-row>
-        <div class="login-box">
-          <ion-row>
-            <ion-col>
-              <ion-list inset>
-      
-                <ion-item>
-                  <ion-input type="text" placeholder="Email" name="email"></ion-input>
-                </ion-item>
-                <ion-item>
-                  <ion-input type="password" placeholder="Password" name="password"></ion-input>
-                </ion-item>
-              </ion-list>
-            </ion-col>
-          </ion-row>
-      
-          <ion-row>
-            <ion-col class="signup-col">
-              <button ion-button class="submit-btn">Anmelden</button>
-              <button ion-button class="pwVergessen-btn">passwort vergessen?</button>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col class="signup-col">
-                <button ion-button class="register-btn" (click)="goToRegisterpage()">kostenlos registrieren</button>
-            </ion-col>
-          </ion-row>
-        </div>
-      </ion-content>
+  <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <ion-item>
+        <img src="../assets/bilder/logo.jpg" height="300px" width="300px" alt="p4ChangeLogo" />
+      </ion-item>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-list radio-group [(ngModel)]="autoManufacturers">
+        <ion-item>
+          <ion-label>Patron</ion-label>
+          <ion-radio value="Patron"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Changemaker</ion-label>
+          <ion-radio value="CHangemaker"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Gast</ion-label>
+          <ion-radio value="Gast"></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <div class="login-box">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+
+          <ion-item>
+            <ion-label color="primary">E-mail:</ion-label>
+            <ion-input placeholder="beispiel@abc.com"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary">Passwort:</ion-label>
+            <ion-input type="password" placeholder="********"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary">Vorname:</ion-label>
+            <ion-input placeholder="Vorname"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary">Nachname:</ion-label>
+            <ion-input placeholder="Nachname"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="signup-col">
+        <button ion-button class="submit-btn">Fertig!</button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
