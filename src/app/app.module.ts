@@ -15,7 +15,6 @@ import { ProjectPage } from "../pages/project/project";
 import { CategoryPage } from "../pages/category/category";
 import { SidemenuPage } from "../pages/sidemenu/sidemenu";
 
-import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 
 @NgModule({
   declarations: [
@@ -50,8 +49,7 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    QRScanner
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+
 import { TestPage } from "../test/test";
 import { AboutPage } from '../about/about';
 import { FaqPage } from '../faq/faq';
 import { ProfilePage } from '../profile/profile';
 import { CategoryPage } from '../category/category';
-import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
+
+import { ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-sidemenu',
@@ -21,12 +23,12 @@ export class SidemenuPage {
 
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams, 
-    public qrScanner: QRScanner
+    public navParams: NavParams,
+    private toastCtrl: ToastController
   ) { }
 
   public scanQR(): void {
-    this.qrScanner.scan();
+    
   }
 
   public logout(): void {
@@ -47,5 +49,9 @@ export class SidemenuPage {
 
   public goYT(): void {
     window.open("https://www.youtube.com/playlist?list=PLne435yhSICfjp5hqN9IpCRY5NolZ9c2G");
+  }
+
+  private getPatronId(): String {
+    return null;
   }
 }

@@ -4,10 +4,6 @@
     </ion-header>
     <ion-content padding>
         <ion-list>
-            <button ion-item (click)="scanQR()">
-                <ion-icon item-left name="qr-scanner"></ion-icon>
-                QR-Code scannen
-            </button>
             <button ion-item [navPush]="profilePage">
                 <ion-icon item-left name="contact"></ion-icon>
                 Profil
@@ -23,6 +19,14 @@
             <button ion-item [navPush]="faqPage">
                 <ion-icon item-left name="help"></ion-icon>
                 FAQ
+            </button>
+            <button ion-item (click)="scanQR()">
+                <ion-icon item-left name="qr-scanner"></ion-icon>
+                QR-Code scannen
+            </button>
+            <button ion-item (click)="logout()">
+                <ion-icon item-left name="log-out"></ion-icon>
+                Abmelden
             </button>
         </ion-list>
         <div class="socialmedia-container">
@@ -40,8 +44,7 @@
             </button>
         </div>
     </ion-content>
-    <ion-footer (click)="logout()">
-        <span>Abmelden</span>
+    <ion-footer>
     </ion-footer>
 </ion-menu>
 
