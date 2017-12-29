@@ -12,10 +12,10 @@
         <ion-list inset>
 
           <ion-item>
-            <ion-input type="text" placeholder="Email" name="email"></ion-input>
+            <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="data.username"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input type="password" placeholder="Password" name="password"></ion-input>
+            <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="data.password"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
@@ -23,7 +23,7 @@
 
     <ion-row>
       <ion-col class="signup-col">
-        <button ion-button class="submit-btn">Anmelden</button>
+        <button ion-button class="submit-btn" (click)="login()">Anmelden</button>
         <button ion-button class="pwVergessen-btn">passwort vergessen?</button>
       </ion-col>
     </ion-row>

@@ -16,6 +16,8 @@ import { CategoryPage } from "../pages/category/category";
 import { SidemenuPage } from "../pages/sidemenu/sidemenu";
 import { RegisterPage } from "../pages/register/register";
 
+import { HttpModule} from '@angular/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -32,7 +34,8 @@ import { RegisterPage } from "../pages/register/register";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
