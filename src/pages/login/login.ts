@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { RegisterPage } from '../register/register';
 import { Http } from '@angular/http';
-import { TestPage } from "../test/test";
+import { SidemenuPage } from "../sidemenu/sidemenu";
 import { ToastController } from 'ionic-angular';
 
 @Component({
@@ -43,7 +43,7 @@ export class LoginPage {
       
       if(this.data.response == "Successfully logged in") {
         this.showToast("Erfolgreich angemeldet!");
-        this.navCtrl.setRoot(TestPage);
+        this.navCtrl.setRoot(SidemenuPage);
       }else {
         this.showToast("Fehler bei der Anmeldung! Versuchs nochmal...");
       }
