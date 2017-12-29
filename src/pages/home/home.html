@@ -1,14 +1,42 @@
-<ion-header>
+<ion-header style="background-color: blue !important;">
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      Ionic Blank
+        PATRON4Change
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="sub-title">Dein Engagement startet hier</div>
+  
+  <ion-item>
+    <ion-label color="primary" floating>Welche Änderungen möchtest du sehen?</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <div class="money-share">
+    <div class="green progress-bar-cotainer">
+      Dein Changemaker erhält
+      <div class="progress-bar">
+        <div class="ninety percent"></div>90%
+      </div>
+    </div>
+
+    <div class="red progress-bar-cotainer">
+      Laufende Kosten der Plattform
+      <div class="progress-bar">
+        <div class="six percent"></div>6.5%
+      </div>
+    </div>
+    
+    <div class="blue progress-bar-cotainer">
+      Transaktionskosten
+      <div class="progress-bar">
+        <div class="three percent"></div>3.5%
+      </div>
+    </div>
+  </div>
 </ion-content>

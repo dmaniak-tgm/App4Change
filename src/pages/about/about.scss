@@ -1,6 +1,19 @@
 page-about {
+  h1 {
+    color: map-get($colors, "primary");
+    text-align: center;
+  }
 
-  text{ 
-    word-wrap: break-word;
+  p {
+    font-size: 16px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .one-liner {
+    display: block;
+  }
+
+  .primary {
+    color: map-get($colors, "primary");
   }
 }
