@@ -18,7 +18,6 @@ import { RegisterPage } from "../pages/register/register";
 
 import { HttpModule} from '@angular/http';
 
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -56,8 +55,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BarcodeScanner
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

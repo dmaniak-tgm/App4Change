@@ -7,7 +7,6 @@ import { FaqPage } from '../faq/faq';
 import { ProfilePage } from '../profile/profile';
 import { CategoryPage } from '../category/category';
 
-import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner';
 import { ToastController } from 'ionic-angular';
 
 @Component({
@@ -25,23 +24,11 @@ export class SidemenuPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private scanner: BarcodeScanner,
     private toastCtrl: ToastController
   ) { }
 
   public scanQR(): void {
-    this.scanner.scan({
-      showFlipCameraButton: false,
-      showTorchButton: false,
-      prompt: "Scan Patron4change QR-Code",
-      orientation: "portrait",
-      torchOn: false,
-      resultDisplayDuration: 0
-    }).then((res: BarcodeScanResult) => {
-      if(!res.cancelled && this.getPatronId(res)) {
-        this.navCtrl.push(ProfilePage); // TODO: need to add id to profile page push 
-      }
-    });
+    
   }
 
   public logout(): void {
@@ -64,17 +51,7 @@ export class SidemenuPage {
     window.open("https://www.youtube.com/playlist?list=PLne435yhSICfjp5hqN9IpCRY5NolZ9c2G");
   }
 
-  private getPatronId(qrcode: BarcodeScanResult): String {
-    let content: String = qrcode.text;
-    
-    if(qrcode.format === "QR_CODE" && content.startsWith("patron4change://profile/")) {
-      return content.replace("patron4change://profile/", ""); // replaces with nothing so only id is left
-    }
-    this.toastCtrl.create({
-      message: "Das ist kein Patron4change QR-Code!",
-      position: "bottom",
-      duration: 1500
-    }).present();
+  private getPatronId(): String {
     return null;
   }
 }
