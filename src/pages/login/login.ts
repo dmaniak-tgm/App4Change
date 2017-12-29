@@ -16,7 +16,7 @@ export class LoginPage {
   data: any = {};
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http, private toastCtrl: ToastController) {
-    this.data.username = "";
+    this.data.mail = "";
     this.data.password = "";
     this.data.response = "";
   }
@@ -34,15 +34,15 @@ export class LoginPage {
     let link = "http://localhost/PHP/login.php";
 
     let myData = JSON.stringify({
-      username: this.data.username, 
+      mail: this.data.mail, 
       password: this.data.password
     });
     
     this.http.post(link, myData).subscribe(data => {
       this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
       
-      if(this.data.response == "Erfolgreich angemeldet!") {
-        this.showToast(this.data.response);
+      if(this.data.response == "Successfully logged in") {
+        this.showToast("Erfolgreich angemeldet!");
         this.navCtrl.setRoot(TestPage);
       }else {
         this.showToast("Fehler bei der Anmeldung! Versuchs nochmal...");
