@@ -52,19 +52,11 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-<<<<<<< HEAD
-      "cordova-plugin-ionic-webview": {}
-=======
       "cordova-plugin-ionic-webview": {},
       "phonegap-plugin-barcodescanner": {}
->>>>>>> master
     },
     "platforms": [
       "android"
     ]
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
