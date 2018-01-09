@@ -1,3 +1,45 @@
 page-faq {
 
+    ion-card-header {
+        background: #84b991;
+        white-space: normal;
+        text-align: center;
+        font-size: 16px !important;
+    }
+    
+    .ue {
+        text-align: center;
+        margin: center;
+   
+   }
+
+   h1 {
+       font-size: 20px !important;
+       text-align: center;
+
+   }
+
+   .open {
+        background-color:white; 
+        display: block;
+        color: black;
+        transition: 1s all;
+        display: none;
+   }
+   ion-slide {
+       align-items: flex-start !important;
+   }
+   .swiper-slide{
+       overflow-y: scroll;
+       display: block;
+   }
 }
+
+
+
+
+
+
+
+
+

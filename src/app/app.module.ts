@@ -14,6 +14,9 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ProjectPage } from "../pages/project/project";
 import { CategoryPage } from "../pages/category/category";
 import { SidemenuPage } from "../pages/sidemenu/sidemenu";
+import { RegisterPage } from "../pages/register/register";
+
+import { HttpModule} from '@angular/http';
 
 
 @NgModule({
@@ -27,11 +30,13 @@ import { SidemenuPage } from "../pages/sidemenu/sidemenu";
     ProfilePage,
     ProjectPage,
     CategoryPage,
-    SidemenuPage
+    SidemenuPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,7 +49,8 @@ import { SidemenuPage } from "../pages/sidemenu/sidemenu";
     ProfilePage,
     ProjectPage,
     CategoryPage,
-    SidemenuPage
+    SidemenuPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
