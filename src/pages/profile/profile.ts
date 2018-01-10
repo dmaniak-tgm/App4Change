@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 @Component({
   selector: 'page-profile',
   templateUrl: 'profile.html',
