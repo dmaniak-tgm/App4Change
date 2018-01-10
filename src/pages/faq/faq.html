@@ -11,7 +11,7 @@
   
     <ion-slides>
         <ion-slide>
-            <h1>Allgemeines <ion-icon class="rightArrow" name="arrow-forward"></ion-icon> </h1>
+            <h1>Allgemeines <ion-icon class="rightArrow" name="arrow-forward" (click)="goToSlide(1, 500)"></ion-icon> </h1>
             <ion-card>
               <ion-card-header (click)="openquestion1()">
                   Crowdfunding gibt’s ja schon.Was ist das Neue an PATRON4change?      
@@ -49,7 +49,7 @@
             </ion-card>
       </ion-slide>
       <ion-slide class="cSlide">
-          <h1>Changemaker <ion-icon class="leftArrow" name="arrow-back"></ion-icon> <ion-icon class="rightArrow" name="arrow-forward"></ion-icon></h1>
+          <h1>Changemaker <ion-icon class="leftArrow" name="arrow-back" (click)="goToSlide(0,500)"></ion-icon> <ion-icon class="rightArrow" name="arrow-forward" (click)="goToSlide(2,500)"></ion-icon></h1>
           <ion-card>
             <ion-card-header (click)="openquestion5()">
                 Mein Profil ist online. Wie komme ich jetzt zu Patrons?        
@@ -69,7 +69,7 @@
             </ion-card>
       </ion-slide>
       <ion-slide class="pSlide">
-          <h1>Patrons <ion-icon class="leftArrow" name="arrow-back"></ion-icon></h1>
+          <h1>Patrons <ion-icon class="leftArrow" name="arrow-back" (click)="goToSlide(1,500)"></ion-icon></h1>
           <ion-card>
               <ion-card-header (click)="openquestion7()">
                   Ich will spenden, warum ausgerechnet auf PATRON4change?             
