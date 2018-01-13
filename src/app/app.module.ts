@@ -16,6 +16,7 @@ import { CategoryPage } from "../pages/category/category";
 import { SidemenuPage } from "../pages/sidemenu/sidemenu";
 import { RegisterPage } from "../pages/register/register";
 
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { HttpModule} from '@angular/http';
 
 
@@ -55,7 +56,8 @@ import { HttpModule} from '@angular/http';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BarcodeScanner
   ]
 })
 export class AppModule {}
