@@ -6,6 +6,7 @@ import { AboutPage } from '../about/about';
 import { FaqPage } from '../faq/faq';
 import { ProfilePage } from '../profile/profile';
 import { CategoryPage } from '../category/category';
+import { RegisterPage } from "../register/register";
 
 import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner';
 import { ToastController } from 'ionic-angular';
@@ -21,6 +22,8 @@ export class SidemenuPage {
   private categoryPage = CategoryPage;
   private aboutPage = AboutPage;
   private profilePage = ProfilePage;
+
+  private signedIn: boolean = false;
 
   constructor(
     public navCtrl: NavController, 
@@ -65,7 +68,7 @@ export class SidemenuPage {
   }
 
   public signIn(role: String) {
-
+    this.navCtrl.push(RegisterPage, {selectedRole: role});
   }
 
   private getPatronId(qrcode: BarcodeScanResult): String {

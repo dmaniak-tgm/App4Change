@@ -7,7 +7,11 @@ import { ViewChild } from '@angular/core';
     templateUrl: 'register.html',
 })
 export class RegisterPage {
-
+    private role: any = null;
     constructor(public navCtrl: NavController, public navParams: NavParams) {
+    }
+
+    ionViewDidLoad() {
+        this.role = this.navParams.get("selectedRole");
     }
 }
