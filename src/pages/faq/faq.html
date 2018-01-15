@@ -11,12 +11,12 @@
   
     <ion-slides>
         <ion-slide>
-            <h1>Allgemeines</h1>
+            <h1>Allgemeines <ion-icon class="rightArrow" name="arrow-forward" (click)="goToSlide(1, 500)"></ion-icon> </h1>
             <ion-card>
               <ion-card-header (click)="openquestion1()">
                   Crowdfunding gibt’s ja schon.Was ist das Neue an PATRON4change?      
               </ion-card-header>
-              <ion-card-content class="open" id="open1">
+              <ion-card-content class="open" id="open1" style="display: none;">
                 Bisher wurden nur Projekte mithilfe der Crowd finanziert. PATRON4change setzt früher an und bringt Menschen die Freiheit, sich Projekten widmen zu können. Ein Job raubt ihnen Zeit und Energie für ein Engagement, jedoch benötigen sie das Geld, das er ihnen bringt. Mittels PATRON4change können sie sich ein Grundeinkommen verschaffen, das ihnen den Rücken für ihr Engagement freihält. Somit können sich viel mehr Menschen engagieren.
               </ion-card-content>
             </ion-card>
@@ -25,7 +25,7 @@
               <ion-card-header (click)="openquestion2()">
                 Warum soll ich überhaupt auf PATRON4change vorbei schauen?      
               </ion-card-header>
-              <ion-card-content class="open" id="open2">
+              <ion-card-content class="open" id="open2" style="display: none;">
                 Die Changemaker liefern mit ihren Videos Inspiration und geben mit ihrem Beispiel Mut, selbst ein Engagement zu starten oder bei einer auf PATRON4change präsentieren Lösung mitzuarbeiten. Begeisterung ist bekanntlich die stärkste Form der Motivation und wirkt wie ein Motor, der anderen Freude verleiht. Tauche einfach ein in die Welt von PATRON4change, trete in Austausch mit interessanten Persönlichkeiten und lass dich überraschen.
                 
               </ion-card-content>
@@ -34,7 +34,7 @@
               <ion-card-header (click)="openquestion3()">
                 Wieso glaubt ihr, dass ausgerechnet PATRON4change wirklich was verändern kann?     
               </ion-card-header>
-              <ion-card-content class="open" id="open3">
+              <ion-card-content class="open" id="open3" style="display: none;">
                 PATRON4change ist ein Marktplatz der Lösungen und ein Ökosystem für Wandel, weil: Alle registrierten Nutzer auf PATRON4change können in Kontakt mit den Changemakern treten. Patrons bekommen zusätzlich die Möglichkeit, mit ihnen zu chatten. So können alle gemeinsam an Lösungen arbeiten. Neben der Unterstützung der Patrons können sich Changemaker auch Hilfe von anderen Changemakern holen, die an Lösungen zum gleichen Thema arbeiten. PATRON4change stellt neue Verbindungen zwischen Menschen her, die gemeinsam Wandel mitgestalten wollen. 
                 
               </ion-card-content>
@@ -43,18 +43,18 @@
               <ion-card-header (click)="openquestion4()">
                 Warum ist PATRON4change gerade jetzt entstanden?     
               </ion-card-header>
-              <ion-card-content class="open" id="open4">
+              <ion-card-content class="open" id="open4" style="display: none;">
                 Aus unserer eigenen Erfahrung wissen wir um die Probleme, die Menschen haben, wenn sie sich engagieren wollen. Gerade jetzt ist es aber umso wichtiger, denn wo Politik und Wirtschaft versagen ist zivilgesellschaftliches Engagement gefragt. Das kann sich aber nicht jeder leisten. Entweder es fehlt an Zeit oder an Geld dafür. PATRON4change räumt die Steine aus dem Weg und ermöglicht es damit den Menschen sich in jene Richtung zu engagieren, die sie und die Crowd (ihre Unterstützer) für wichtig erachten.      
               </ion-card-content>
             </ion-card>
       </ion-slide>
       <ion-slide class="cSlide">
-          <h1>Changemaker</h1>
+          <h1>Changemaker <ion-icon class="leftArrow" name="arrow-back" (click)="goToSlide(0,500)"></ion-icon> <ion-icon class="rightArrow" name="arrow-forward" (click)="goToSlide(2,500)"></ion-icon></h1>
           <ion-card>
             <ion-card-header (click)="openquestion5()">
                 Mein Profil ist online. Wie komme ich jetzt zu Patrons?        
             </ion-card-header>
-            <ion-card-content class="open" id="open5">
+            <ion-card-content class="open" id="open5" style="display: none;">
               Erzähle von deiner Mission: Lass alle deine Freunde und Bekannten wissen, dass sie dich auf PATRON4change unterstützen können. Alles was sie dafür benötigen ist ein PayPal-Account. 
               Schreibe Updates über deine Aktivitäten: Du hast die Möglichkeit, deine Follower regelmäßig über deine Aktivitäten zu informieren, indem du direkt Updates in dein Profil schreibst, oder deine Social Media-Kanäle mit deinem Profil verknüpfst.      
             </ion-card-content>
@@ -63,18 +63,18 @@
               <ion-card-header (click)="openquestion6()">
                   Warum soll ich Updates über Aktivitäten zu meiner Mission schreiben?        
               </ion-card-header>
-              <ion-card-content class="open" id="open6">
+              <ion-card-content class="open" id="open6" style="display: none;">
                 Die laufende Dokumentation deines Engagements macht potentielle Patros neugierig. Bestehende Patrons werden bei Laune gehalten. Umso mehr du postest, desto mehr Aufmerksamkeit bekommst du von uns auf der Plattform.
               </ion-card-content>
             </ion-card>
       </ion-slide>
       <ion-slide class="pSlide">
-          <h1>Patrons</h1>
+          <h1>Patrons <ion-icon class="leftArrow" name="arrow-back" (click)="goToSlide(1,500)"></ion-icon></h1>
           <ion-card>
               <ion-card-header (click)="openquestion7()">
                   Ich will spenden, warum ausgerechnet auf PATRON4change?             
               </ion-card-header>
-              <ion-card-content class="open" id="open7">
+              <ion-card-content class="open" id="open7" style="display: none;">
                 Bei uns steht der Mensch mit all seiner Leidenschaft im Mittelpunkt. Dein Geld fließt nicht in eine Organisation sondern ihm wird Leben eingehaucht. Du kannst live miterleben, was damit passiert. Indem du zur Realisierung von Ideen beiträgst, wirst du selbst Teil einer Lösung. Du kannst sogar direkt mit deinen Changemakern in Kontakt treten und an ihren Projekten mitarbeiten. Somit übernimmst du selbst soziale Verantwortung und kannst diese (sofern du willst) auch öffentlich sichtbar machen. Eine Zuwendung kann jederzeit ohne Angabe von Gründen storniert werden.
               </ion-card-content>
             </ion-card>
@@ -82,7 +82,7 @@
                 <ion-card-header (click)="openquestion8()">
                     Warum sollten wir als Unternehmen bei PATRON4change mitmachen?       
                 </ion-card-header>
-                <ion-card-content class="open" id="open8">
+                <ion-card-content class="open" id="open8" style="display: none;">
                   Findet einfach einen Changemaker, der zu eurem Unternehmen passt und lasst ihn euer Botschafter für Wandel sein. Wir unterstützen euch gerne bei der Auswahl. Damit könnt ihr als Firma alle zusammen soziale Verantwortung übernehmen und diese auch nach Außen zeigen, was ganz nebenbei auch noch gut für’s Image ist. Das bindet Kunden ans Unternehmen, ist praktisch für die Neukundengewinnung und stärkt den Zusammenhalt innerhalb der Belegschaft, weil man gemeinsam für etwas Gutes eintritt.
                 </ion-card-content>
               </ion-card>

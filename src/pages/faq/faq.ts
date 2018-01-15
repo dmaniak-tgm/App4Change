@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
-
+import { Slides } from 'ionic-angular';
 @Component({
   selector: 'page-faq',
   templateUrl: 'faq.html',
@@ -10,8 +10,11 @@ export class FaqPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  
+  @ViewChild(Slides) slides: Slides;
  
+  goToSlide(a,b) {
+    this.slides.slideTo(a, b);
+  }
 
   openquestion1(){
     if(document.getElementById('open1').style.display === "none") {
