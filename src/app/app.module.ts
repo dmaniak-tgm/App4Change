@@ -15,6 +15,7 @@ import { ProjectPage } from "../pages/project/project";
 import { CategoryPage } from "../pages/category/category";
 import { SidemenuPage } from "../pages/sidemenu/sidemenu";
 import { RegisterPage } from "../pages/register/register";
+import { CategoryDetailsPage } from "../pages/category-details/category-details";
 
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { HttpModule} from '@angular/http';
@@ -32,7 +33,8 @@ import { HttpModule} from '@angular/http';
     ProjectPage,
     CategoryPage,
     SidemenuPage,
-    RegisterPage
+    RegisterPage,
+    CategoryDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { HttpModule} from '@angular/http';
     ProjectPage,
     CategoryPage,
     SidemenuPage,
-    RegisterPage
+    RegisterPage,
+    CategoryDetailsPage
   ],
   providers: [
     StatusBar,
