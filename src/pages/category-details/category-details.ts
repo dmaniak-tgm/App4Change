@@ -6,7 +6,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'category-details.html',
 })
 export class CategoryDetailsPage {
-
+  title: String = "Loading...";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewDidLoad() {
+    this.title = this.navParams.get("categoryTitle");
   }
 }

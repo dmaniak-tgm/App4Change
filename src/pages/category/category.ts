@@ -12,6 +12,6 @@ export class CategoryPage {
   }
 
   public goCategory(title: string): void {
-    this.navCtrl.push(CategoryDetailsPage);
+    this.navCtrl.push(CategoryDetailsPage, {categoryTitle: title});
   }
 }
