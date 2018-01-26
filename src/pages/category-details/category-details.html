@@ -8,5 +8,45 @@
   
   
 <ion-content padding>
+    <div *ngIf="!isUmwelt()" style="display: flex; justify-content: center;">
+        Keine aktiven Missionen :(
+    </div>
+
+    <div *ngIf="isUmwelt()">
+            <ion-card>
+                    <ion-item>
+                      <ion-avatar item-start (click)="openProfile()">
+                        <img src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/26166324_378689232555860_654451119968512004_n.jpg?oh=380e828b3a9ccc7f484f54cc3d7573fe&oe=5AFC513E">
+                      </ion-avatar>
+                      <h2>Andrej Fröhlich</h2>
+                      <p>25. November 2017</p>
+                    </ion-item>
+                      <iframe  src="https://www.youtube.com/embed/zKOt_0dsRJY?modestbranding=1&showinfo=0&controls=0"></iframe>
+                    
+                      <ion-card-content>
+                        <p>Ich möchte mit meinem Projekt "weniger Plastikflaschen" die Welt retten. Ich suche Unterstützung </p>
+                      </ion-card-content>
+                    
+                      <ion-row>
+                        <ion-col>
+                          <button ion-button icon-left clear small (click)="likeIt()">
+                            <ion-icon name="thumbs-up"></ion-icon>
+                            <div>{{like}} Likes</div>
+                          </button>
+                        </ion-col>
+                        <ion-col>
+                          <button ion-button icon-left clear small>
+                            <ion-icon name="text"></ion-icon>
+                            <div>2 Updates</div>
+                          </button>
+                        </ion-col>
+                        <ion-col center text-center>
+                          <ion-note>
+                            11h ago
+                          </ion-note>
+                        </ion-col>
+                      </ion-row>
+                    </ion-card>
+    </div>
 </ion-content>
   

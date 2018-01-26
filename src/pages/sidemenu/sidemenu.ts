@@ -4,9 +4,11 @@ import { NavController, NavParams } from 'ionic-angular';
 import { TestPage } from "../test/test";
 import { AboutPage } from '../about/about';
 import { FaqPage } from '../faq/faq';
-import { ProfilePage } from '../profile/profile';
+import { MyProfilePage } from '../my-profile/my-profile';
+import { MissionPage } from '../mission/mission';
 import { CategoryPage } from '../category/category';
 import { RegisterPage } from "../register/register";
+import { LoginPage } from "../login/login";
 
 import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner';
 import { ToastController } from 'ionic-angular';
@@ -16,12 +18,12 @@ import { ToastController } from 'ionic-angular';
   templateUrl: 'sidemenu.html',
 })
 export class SidemenuPage {
-  private rootPage = TestPage;
+  private rootPage = CategoryPage;
   
   private faqPage = FaqPage;
   private categoryPage = CategoryPage;
   private aboutPage = AboutPage;
-  private profilePage = ProfilePage;
+  private profilePage = MyProfilePage;
 
   private signedIn: boolean = false;
 
@@ -42,13 +44,14 @@ export class SidemenuPage {
       resultDisplayDuration: 0
     }).then((res: BarcodeScanResult) => {
       if(!res.cancelled && this.getPatronId(res)) {
-        this.navCtrl.push(ProfilePage); // TODO: need to add id to profile page push 
+        this.navCtrl.push(MissionPage); // TODO: need to add id to profile page push 
       }
     });
   }
 
   public logout(): void {
     console.trace("Needs to be implemented");
+    this.navCtrl.setRoot(LoginPage);
   }
 
   public goFacebook(): void {

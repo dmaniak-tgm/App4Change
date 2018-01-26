@@ -1,0 +1,82 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      <ion-title>Andrej Fröhlich</ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+    <ion-scroll style="height:140%; width:100%;">
+      <ion-grid style="padding: 12px;">
+        <ion-row style="margin-bottom: 20px">
+            <img height="80px" width="80px" src ="https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/26166324_378689232555860_654451119968512004_n.jpg?oh=380e828b3a9ccc7f484f54cc3d7573fe&oe=5AFC513E">
+            <div style = "padding-left: 12px;">
+              <div style="display: block; padding-bottom: 12px;"><span style="color: #84b991; font-size: 24px;">Andrej Fröhlich</span></div>
+              <div style="display: block;"><span style="color: #84b991;">Interessen:</span> Technologie, Tiere</div>
+              <div style="display: block;"><span style="color: #84b991;">Webseite:</span> <a href="www.againstplatic.com">www.againstPlastic.com</a></div>
+            </div>
+        </ion-row>
+        <ion-row>
+            <ion-card>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img height="80px" width="80px" src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/26166324_378689232555860_654451119968512004_n.jpg?oh=380e828b3a9ccc7f484f54cc3d7573fe&oe=5AFC513E">
+                  </ion-avatar>
+                  <h2>Andrej Fröhlich</h2>
+                  <p>25. November 2017</p>
+                </ion-item>
+                  <iframe  src="https://www.youtube.com/embed/zKOt_0dsRJY?modestbranding=1&showinfo=0&controls=0"></iframe>
+                
+                  <ion-card-content>
+                    <p>Ich möchte mit meinem Projekt "weniger Plastikflaschen" die Welt retten. Ich suche Unterstützung </p>
+                  </ion-card-content>
+                
+                  <ion-row>
+                    <ion-col>
+                      <button ion-button icon-left clear small (click)="likeIt()">
+                        <ion-icon name="thumbs-up"></ion-icon>
+                        <div>{{like}} Likes</div>
+                      </button>
+                    </ion-col>
+                    <ion-col>
+                      <button ion-button icon-left clear small>
+                        <ion-icon name="text"></ion-icon>
+                        <div>2 Updates</div>
+                      </button>
+                    </ion-col>
+                    <ion-col center text-center>
+                      <ion-note>
+                        11h ago
+                      </ion-note>
+                    </ion-col>
+                  </ion-row>
+                </ion-card>
+              </ion-row>
+              <ion-row style="font-size: 20px; padding: 30px 0px 15px 0;">
+                  Missionsupdates
+              </ion-row>
+      </ion-grid>
+
+
+      <ion-card>
+          <ion-card-header>
+            Funding fertig
+          </ion-card-header>
+          <ion-card-content>
+            Wir haben unser Spendenziel von 2500€ erreicht. Danke euch leute :)
+          </ion-card-content>
+      </ion-card>
+
+
+          <ion-card>
+              <ion-card-header>
+                Funding gestartet
+              </ion-card-header>
+              <ion-card-content>
+                Hey ich wollte nur mal die Plattform testen und euch meine Mission zeigen :)
+              </ion-card-content>
+    </ion-card>
+    </ion-scroll>
+</ion-content>
+  

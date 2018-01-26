@@ -1,0 +1,11 @@
+page-mission {
+    ion-content {
+        div.scroll-content {
+            display: flex;
+            
+            iframe {
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MissionPage } from "../mission/mission";
 
 @Component({
   selector: 'page-category-details',
@@ -12,5 +13,13 @@ export class CategoryDetailsPage {
 
   ionViewDidLoad() {
     this.title = this.navParams.get("categoryTitle");
+  }
+
+  isUmwelt():boolean {
+    return this.title === "Umwelt";
+  }
+
+  openProfile() {
+    this.navCtrl.push(MissionPage);
   }
 }

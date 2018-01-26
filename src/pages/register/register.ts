@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
+import { SidemenuPage } from "../sidemenu/sidemenu";
 
 @Component({
     selector: 'page-register',
@@ -13,5 +14,9 @@ export class RegisterPage {
 
     ionViewDidLoad() {
         this.role = this.navParams.get("selectedRole");
+    }
+
+    signedIn() {
+        this.navCtrl.setRoot(SidemenuPage);
     }
 }

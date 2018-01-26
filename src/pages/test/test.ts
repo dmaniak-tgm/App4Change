@@ -4,8 +4,7 @@ import { HomePage } from "../home/home";
 import { AboutPage } from '../about/about';
 import { FaqPage } from '../faq/faq';
 import { LoginPage } from "../login/login";
-import { ProfilePage } from '../profile/profile';
-import { ProjectPage } from "../project/project";
+import { MissionPage } from "../mission/mission";
 
 @Component({
   selector: 'page-test',
@@ -29,15 +28,11 @@ export class TestPage {
     this.navCtrl.push(FaqPage);
   }
 
-  public goProjectPage(): void {
-    this.navCtrl.push(ProjectPage);
+  public goMissionPage(): void {
+    this.navCtrl.push(MissionPage);
   }
 
   public goAboutPage(): void {
     this.navCtrl.push(AboutPage);
-  }
-
-  public goProfilePage(): void {
-    this.navCtrl.push(ProfilePage);
   }
 }

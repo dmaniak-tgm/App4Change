@@ -20,30 +20,13 @@
                 <ion-icon item-left name="help"></ion-icon>
                 FAQ
             </button>
-            <!-- TODO: Icons missing -->
-            <button ion-item (click)="signIn('Changemaker')">
-                <ion-icon item-left name="trash"></ion-icon>
-                Changemaker werden
-            </button>
-            <button ion-item (click)="signIn('Patron')">
-                <ion-icon item-left name="trash"></ion-icon>
-                Patron werden
-            </button>
-            <button ion-item (click)="signIn('Gast')">
-                <ion-icon item-left name="trash"></ion-icon>
-                Follower werden
-            </button>
             <button ion-item (click)="scanQR()">
                 <ion-icon item-left name="qr-scanner"></ion-icon>
                 QR-Code scannen
             </button>
-            <button *ngIf="signedIn" ion-item (click)="logout()">
-                <ion-icon item-left name="log-out"></ion-icon>
-                Abmelden
-            </button>
-            <button ion-item (click)="login()">
+            <button ion-item (click)="logout()">
                 <ion-icon item-left name="log-in"></ion-icon>
-                Anmelden
+                Abmelden
             </button>
         </ion-list>
         <div class="socialmedia-container">
@@ -59,6 +42,7 @@
             <button ion-button clear large round icon-only (click)="goYT()">
                 <ion-icon color="youtube" name="logo-youtube"></ion-icon>
             </button>
+            
         </div>
     </ion-content>
     <ion-footer>

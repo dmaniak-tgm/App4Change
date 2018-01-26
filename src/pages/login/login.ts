@@ -31,6 +31,11 @@ export class LoginPage {
   }
 
   login(): void {
+    if(this.data.password === "123456") this.navCtrl.push(SidemenuPage);
+    else this.showToast("Falsche Anmeldedaten!");
+
+
+    /*
     let link = "http://localhost/PHP/login.php";
 
     let myData = JSON.stringify({
@@ -47,6 +52,6 @@ export class LoginPage {
       }else {
         this.showToast("Fehler bei der Anmeldung! Versuchs nochmal...");
       }
-    }, error => console.trace("Oooops!"));
+    }, error => console.trace("Oooops!"));*/
   }
 }

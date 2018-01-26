@@ -18,8 +18,9 @@ import { RegisterPage } from "../pages/register/register";
 import { CategoryDetailsPage } from "../pages/category-details/category-details";
 
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { HttpModule} from '@angular/http';
-
+import { HttpModule } from '@angular/http';
+import { MissionPage } from "../pages/mission/mission";
+import { MyProfilePage } from '../pages/my-profile/my-profile';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { HttpModule} from '@angular/http';
     CategoryPage,
     SidemenuPage,
     RegisterPage,
-    CategoryDetailsPage
+    CategoryDetailsPage,
+    MissionPage,
+    MyProfilePage
   ],
   imports: [
     BrowserModule,
@@ -54,13 +57,15 @@ import { HttpModule} from '@angular/http';
     CategoryPage,
     SidemenuPage,
     RegisterPage,
-    CategoryDetailsPage
+    CategoryDetailsPage,
+    MissionPage,
+    MyProfilePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner
-  ]
+  ] 
 })
 export class AppModule {}

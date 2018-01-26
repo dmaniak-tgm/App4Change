@@ -1,56 +1,64 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Category</ion-title>
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Patron4Change</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="card-background-page">
+
+    <ion-item>
+      <ion-label color="primary" floating>Welche Änderungen möchtest du sehen?</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
   <ion-card (click)="goCategory('Hungerhilfe')">
     <img src="../assets/bilder/categories/Hungerhilfe.jpg"/>
     <div class="card-title">Hungerhilfe</div>
     <div class="card-subtitle">0 Missionen</div>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="goCategory('Technologie')">
     <img src="../assets/bilder/categories/Technologie.jpg"/>
     <div class="card-title">Technologie</div>
     <div class="card-subtitle">0 Missionen</div>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="goCategory('Frauen')">
     <img src="../assets/bilder/categories/Frauen.jpg"/>
     <div class="card-title">Frauen</div>
     <div class="card-subtitle">0 Missionen</div>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="goCategory('Tiere')">
     <img src="../assets/bilder/categories/Tiere.jpg"/>
     <div class="card-title">Tiere</div>
     <div class="card-subtitle">0 Missionen</div>
   </ion-card>
 
-  <ion-card>
-    <img src="../assets/bilder/categories/Menschenrecht.jpg"/>
+  <ion-card (click)="goCategory('Menschenrechte')">
+    <img src="../assets/bilder/categories/Menschenrechte.jpg"/>
     <div class="card-title">Menschenrechte</div>
     <div class="card-subtitle">0 Missionen</div>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="goCategory('Kultur')">
     <img src="../assets/bilder/categories/Kultur.jpg"/>
     <div class="card-title">Kultur</div>
     <div class="card-subtitle">0 Missionen</div>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="goCategory('Umwelt')">
     <img src="../assets/bilder/categories/Umwelt.jpg"/>
     <div class="card-title">Umwelt</div>
     <div class="card-subtitle">1 Mission</div>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="goCategory('Bildung')">
     <img src="../assets/bilder/categories/Bildung.jpg"/>
     <div class="card-title">Bildung</div>
     <div class="card-subtitle">0 Missionen</div>
